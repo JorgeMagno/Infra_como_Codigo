@@ -1,30 +1,7 @@
 # Infraestrutura como código
 
-Scripts desenvolvidos a partir de um desafio de projeto na [DIO](https://www.dio.me/). 
-O script ```provisionamento.sh``` cria uma estrutura de usuários e grupos definindo permissões para os seus respectivos diretórios. Além disso, há o script para limpar o provisionamento feito (```limpar_provisionamento.sh```), ou seja, remove a estrutura criada pelo outro.
-
-## Estrutura
-
-O script ```provisionamento.sh``` cria seguinte estrutura:
-![Estrutura](estrutura.png)
-
-## Definições
-
-- **Muito importe antes de executar o código se tornar usuário root.**
-- O dono de todos os diretórios criados será o usuário root;
-- Todos os usuários terão permissão total dentro do diretório publico;
-- Os usuários de cada grupo terão permissão total dentro de seu respectivo diretório;
-- Os usuários têm permissão de leitura, escrita e execução em diretórios de departamentos que eles não pertencem.
-
-## 🛠 Tecnologia
-<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" /><img src="https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white" />
-
-## Uso
-
-```
-./provisionamento.sh
-./limpar_provisionamento.sh
-```
+Scripts desenvolvidos a partir dos desafios de projetos na [DIO](https://www.dio.me/). 
+O diretório ```provisionamento``` constam os códigos que provisionam uma estrutura de usuários e diretórios. Já o outro, ```web_server```, consta o código que provisiona um Servidor We Apache. 
 
 ## Author
 Jorge Magno
