@@ -16,13 +16,6 @@ O script ```provisionamento_web_server.sh``` cria um servidor web.
 ## 🛠 Tecnologia
 <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" /><img src="https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white" />
 
-## Uso
-
-```
-./provisionamento.sh
-./limpar_provisionamento.sh
-```
-
 ## Author
 Jorge Magno
 
