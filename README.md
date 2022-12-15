@@ -1,7 +1,7 @@
 # Infraestrutura como código
 
 Scripts desenvolvidos a partir dos desafios de projetos na [DIO](https://www.dio.me/). 
-O diretório ```provisionamento``` constam os códigos que provisionam uma estrutura de usuários e diretórios. Já o outro, ```web_server```, consta o código que provisiona um Servidor We Apache. 
+O diretório ```provisionamento``` constam os códigos que provisionam uma estrutura de usuários e diretórios. Já o outro, ```web_server```, consta o código que provisiona um Apache Web Server. 
 
 ## Author
 Jorge Magno
