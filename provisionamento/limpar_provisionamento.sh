@@ -1,25 +1,36 @@
 #!/bin/bash
 
-echo -e "\n$(tput setaf 0)$(tput setab 3)Verificando root...$(tput sgr 0)\n"
+colunas=$(tput cols)
+texto='Verificando root...'
+printf "%*s\n" $(((${#texto} + $colunas) / 2)) "$(tput setaf 0)$(tput setab 3)$texto$(tput sgr 0)" 
+#echo -e "\n$(tput setaf 0)$(tput setab 3)Verificando root...$(tput sgr 0)\n"
 
 username=$(id -un)
 
 if [ $username = 'root' ]; then
 
-    echo -e " \n$(tput setaf 7)$(tput setab 2)Usuário root confirmado.$(tput sgr 0)\n"
+    texto='Usuário root confirmado.'
+    printf "%*s\n" $(((${#texto} + $colunas) / 2)) "$(tput setaf 7)$(tput setab 2)$texto$(tput sgr 0)" 
+    #echo -e " \n$(tput setaf 7)$(tput setab 2)Usuário root confirmado.$(tput sgr 0)\n"
     
-    echo -e "\n$(tput setaf 0)$(tput setab 3)Removendo diretórios...$(tput sgr 0)\n"
+    texto='Removendo diretórios...'
+    printf "%*s\n" $(((${#texto} + $colunas) / 2)) "$(tput setaf 0)$(tput setab 3)$texto$(tput sgr 0)" 
+    #echo -e "\n$(tput setaf 0)$(tput setab 3)Removendo diretórios...$(tput sgr 0)\n"
     rm -rf /publico
     rm -rf /adm
     rm -rf /ven
     rm -rf /sec
     
-    echo -e "\n$(tput setaf 0)$(tput setab 3)Removendo grupos...$(tput sgr 0)\n"
+    texto='Removendo grupos...'
+    printf "%*s\n" $(((${#texto} + $colunas) / 2)) "$(tput setaf 0)$(tput setab 3)$texto$(tput sgr 0)" 
+    #echo -e "\n$(tput setaf 0)$(tput setab 3)Removendo grupos...$(tput sgr 0)\n"
     groupdel GRP_ADM
     groupdel GRP_VEN
     groupdel GRP_SEC
     
-    echo -e "\n$(tput setaf 0)$(tput setab 3)Removendo usuários...$(tput sgr 0)\n"
+    texto='Removendo usuários...'
+    printf "%*s\n" $(((${#texto} + $colunas) / 2)) "$(tput setaf 0)$(tput setab 3)$texto$(tput sgr 0)" 
+    #echo -e "\n$(tput setaf 0)$(tput setab 3)Removendo usuários...$(tput sgr 0)\n"
     userdel -r carlos 
     userdel -r maria 
     userdel -r joao 
@@ -30,12 +41,15 @@ if [ $username = 'root' ]; then
     userdel -r amanda
     userdel -r rogerio
     
-    
-    echo -e " \n$(tput setaf 7)$(tput setab 2)Finalizado!$(tput sgr 0)\n"
+    texto='Finalizado!'
+    printf "%*s\n" $(((${#texto} + $colunas) / 2)) "$(tput setaf 7)$(tput setab 2)$texto$(tput sgr 0)" 
+    #echo -e " \n$(tput setaf 7)$(tput setab 2)Finalizado!$(tput sgr 0)\n"
     
 else
 
-    echo -e "\n$(tput setaf 7)$(tput setab 1)Não é root, código não pode ser executado.\nSe torne usuário root e tente novamente.$(tput sgr 0)\n"
+    texto='Não é root, código não pode ser executado.Se torne usuário root e tente novamente.'
+    printf "%*s\n" $(((${#texto} + $colunas) / 2)) "$(tput setaf 7)$(tput setab 1)$texto$(tput sgr 0)"  
+    #echo -e "\n$(tput setaf 7)$(tput setab 1)Não é root, código não pode ser executado.\nSe torne usuário root e tente novamente.$(tput sgr 0)\n"
     
 fi
 
